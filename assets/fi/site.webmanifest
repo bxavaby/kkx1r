@@ -1,15 +1,25 @@
 {
-  "name": "x1r",
-  "short_name": "x1r",
+  "name": "kkx1r",
+  "short_name": "kkx1r",
+  "id": "/",
+  "scope": "/",
+  "description": "0x4652414D452054484154",
+  "categories": ["personal", "portfolio", "dev"],
   "icons": [
     {
-      "src": "/fi/web-app-manifest-192x192.png",
+      "src": "assets/fi/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
-      "src": "/fi/web-app-manifest-512x512.png",
+      "src": "assets/fi/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/fi/maskable-icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
