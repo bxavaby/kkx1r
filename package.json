@@ -1,0 +1,15 @@
+{
+  "name": "x1r",
+  "version": "1.0.0",
+  "description": "「 0x4652414D4520544841542 」",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "bxavaby",
+  "license": "CC BY-NC 4.0",
+  "type": "commonjs"
+}

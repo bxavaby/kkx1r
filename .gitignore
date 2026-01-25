@@ -1,0 +1,19 @@
+node_modules/
+package-lock.json
+
+# assets/fi/
+# assets/fi-v2/
+# assets/fi-v3/
+
+# assets/banner.png
+# assets/banner-v2.png
+# assets/banner-v3.png
+
+# assets/kk-v2.png
+# assets/kk-v3.png
+# assets/kk-v4.png
+# assets/kk-v5.png
+
+# js/main.js
+
+# locales/pt/
