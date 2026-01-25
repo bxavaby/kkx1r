@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
+        <meta name="robots" content="noindex" />
+        <meta name="theme-color" content="#" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <title>404 - Not Found</title>
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=PT+Mono&display=swap"
+        />
+        <link rel="stylesheet" href="css/themes.css" />
+
+        <style>
+            :root {
+                --font-title: "", system-ui, sans-serif;
+                --font-mono: "IosevKKa", "", monospace;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                width: 100%;
+            }
+
+            body {
+                background-color: var(--bg);
+                color: var(--txt);
+                font-family: var(--font-mono);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                padding: 1.5rem;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            h1 {
+                font-family: var(--font-title);
+                font-size: clamp(3rem, 10vw, 5rem);
+                font-weight: 700;
+                color: var(--acc);
+                margin: 0;
+                line-height: 1;
+            }
+
+            p {
+                font-size: clamp(1rem, 4vw, 1.1rem);
+                line-height: 1.6;
+                margin: 1.5rem 0 2.5rem 0;
+                max-width: 35ch;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            a.button {
+                display: inline-block;
+                font-family: var(--font-title);
+                font-weight: 600;
+                text-decoration: none;
+                color: var(--bg);
+                background-color: var(--acc);
+                padding: 0.8rem 2rem;
+                border-radius: 50px;
+                transition: transform 0.2s ease;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                a.button:hover {
+                    transform: scale(1.05);
+                }
+            }
+        </style>
+    </head>
+    <body class="cg">
+        <div class="container">
+            <h1>404</h1>
+            <p>
+                The page could not be found. <br />
+                It might not exist, you know.
+            </p>
+            <a href="/" class="button">Take me home</a>
+        </div>
+    </body>
+</html>
