@@ -1,17 +1,23 @@
-/* Palette::main::cod-gray */
-.cg {
-    --bg: oklch(0.194 0.005 248.1);
-    --bg-meta: #131517;
-    --bg-rgb: 19, 21, 23;
-    --txt: oklch(0.924 0.025 65.6);
-    --acc: oklch(0.728 0.054 117.4);
+/* Palette::locale::english */
+.en {
+    --bg: oklch(0 0 0);
+    --bg-meta: #000000;
+    --txt: #ffffff;
+    --acc: #b2b2b2;
 }
 
-/* Palette::alternative::olive */
-.olive {
-    --bg: oklch(0.937 0.004 91.4);
-    --bg-meta: #ebeae7;
-    --bg-rgb: 235, 234, 223;
-    --txt: oklch(0.247 0.039 97.7);
-    --acc: oklch(0.496 0.09 126.2);
+/* Palette::locale::german */
+.de {
+    --bg: oklch(0 0 0);
+    --bg-meta: #000000;
+    --txt: #fefff2;
+    --acc: #ff604a;
+}
+
+/* Palette::locale::portuguese */
+.pt {
+    --bg: oklch(0 0 0);
+    --bg-meta: #000000;
+    --txt: #ffffff;
+    --acc: #b548c9;
 }

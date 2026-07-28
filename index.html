@@ -11,22 +11,23 @@
         <meta name="robots" content="noai, noimageai" />
         <meta name="referrer" content="no-referrer" />
 
-        <meta name="theme-color" content="#" />
+        <meta name="theme-color" content="#000000" />
 
-        <meta name="description" content="" />
+        <meta name="description" content="a personal site" />
+
         <meta property="og:title" content="kkx1r" />
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
+        <meta property="og:description" content="a personal site" />
+        <meta property="og:image" content="https://kkx1r.net/assets/..." />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        <meta property="og:url" content="https://bxav.me" />
+        <meta property="og:url" content="https://kkx1r.net" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="kkx1r" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:description" content="a personal site" />
+        <meta name="twitter:image" content="https://kkx1r.net/assets/..." />
 
         <meta name="mobile-web-app-capable" content="yes" />
 
@@ -39,23 +40,23 @@
             href="https://creativecommons.org/licenses/by-nc/4.0/"
         />
 
-        <title data-i18n="pageTitle"></title>
+        <title>73 6 0</title>
 
         <link
             rel="icon"
             type="image/png"
-            href="assets/fi/favicon-96x96.png"
+            href="assets/fi-2/favicon-96x96.png"
             sizes="96x96"
         />
-        <link rel="icon" type="image/svg+xml" href="assets/fi/favicon.svg" />
-        <link rel="shortcut icon" href="assets/fi/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="assets/fi-2/favicon.svg" />
+        <link rel="shortcut icon" href="assets/fi-2/favicon.ico" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="assets/fi/apple-touch-icon.png"
+            href="assets/fi-2/apple-touch-icon.png"
         />
         <meta name="apple-mobile-web-app-title" content="x1r" />
-        <link rel="manifest" href="assets/fi/site.webmanifest" />
+        <link rel="manifest" href="assets/fi-2/site.webmanifest" />
 
         <link
             rel="preload"
@@ -109,26 +110,175 @@
             }
         </style>
     </head>
-    <body class="cg">
-        <div class="page-container">
-            <header class="header"></header>
+    <body>
+        <main class="screen" id="screen">
+            <header class="line line--top">
+                <nav class="locale-nav" aria-label="Language selector">
+                    <button
+                        class="locale-link is-active"
+                        type="button"
+                        data-locale="en"
+                    >
+                        en
+                    </button>
+                    <span class="locale-sep">/</span>
+                    <button class="locale-link" type="button" data-locale="de">
+                        de
+                    </button>
+                    <span class="locale-sep">/</span>
+                    <button class="locale-link" type="button" data-locale="pt">
+                        pt
+                    </button>
+                </nav>
+            </header>
 
-            <!-- Main Body -->
-            <main class="main"></main>
+            <div class="divider-main"></div>
 
-            <!-- Footer -->
-            <footer class="footer"></footer>
-        </div>
+            <section class="panel" aria-label="Profile">
+                <div class="line">
+                    <span class="tag" data-i18n="tagAbout">about</span>
+                </div>
+                <p class="text" data-i18n="about"></p>
 
-        <div class="page-loader hidden" id="page-loader">
-            <div class="loader"></div>
-        </div>
+                <div class="line line--gap">
+                    <span class="tag" data-i18n="tagAvailability"
+                        >availability</span
+                    >
+                </div>
+                <p class="text" data-i18n="availability"></p>
 
-        <script src="https://unpkg.com/i18next/i18next.min.js" defer></script>
+                <div class="line line--gap">
+                    <span class="tag" data-i18n="tagNow">currently</span>
+                </div>
+                <p class="text" data-i18n="now"></p>
+
+                <div class="line line--gap">
+                    <span class="tag" data-i18n="tagTimezone">timezone</span>
+                </div>
+                <p class="text">
+                    <time datetime="+02:00"> CEST (UTC+2) </time>
+                </p>
+
+                <div class="divider"></div>
+
+                <!-- <div class="line line--gap">
+                    <span class="tag" data-i18n="tagProjects">projects</span>
+                    </div> -->
+
+                <div class="project-list">
+                    <article class="project-item">
+                        <a
+                            class="project-name"
+                            href="https://github.com/bxavaby/glock"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link project-link"
+                            aria-label="Open glock"
+                            data-i18n="projectOneName"
+                        >
+                            project name
+                        </a>
+                        <p class="project-desc" data-i18n="projectOneDesc">
+                            description
+                        </p>
+                    </article>
+
+                    <article class="project-item">
+                        <a
+                            class="project-name"
+                            href="https://kixkux.codeberg.page/noch/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link project-link"
+                            aria-label="Open noch"
+                            data-i18n="projectTwoName"
+                        >
+                            project name
+                        </a>
+                        <p class="project-desc" data-i18n="projectTwoDesc">
+                            description
+                        </p>
+                    </article>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="line line--gap">
+                    <span class="tag">email</span>
+                </div>
+                <p class="text">
+                    <a
+                        href="mailto:kixkux@pm.me"
+                        class="link"
+                        aria-label="Email kixkux@pm.me"
+                    >
+                        kixkux@pm.me
+                    </a>
+                </p>
+
+                <div class="line line--gap">
+                    <span class="tag">codeberg</span>
+                </div>
+                <p class="text">
+                    <a
+                        href="https://codeberg.org/kixkux"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link"
+                        aria-label="Open Codeberg profile"
+                    >
+                        codeberg.org/kixkux
+                    </a>
+                </p>
+
+                <div class="line line--gap line--lichess">
+                    <span class="tag"> lichess </span>
+                    <p class="text">
+                        [blitz
+                        <span
+                            class="rating-inline"
+                            data-blitz-rating
+                            aria-live="polite"
+                            >…</span
+                        >]
+                    </p>
+                </div>
+                <p class="text">
+                    <a
+                        href="https://lichess.org/@/v7h0rn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link"
+                        aria-label="Open Lichess profile v7h0rn"
+                    >
+                        lichess.org/@/v7h0rn
+                    </a>
+                </p>
+
+                <div class="line line--gap">
+                    <span class="tag">share</span>
+                </div>
+                <p class="text share-actions">
+                    <button
+                        type="button"
+                        class="link link-button"
+                        id="copy-link"
+                        data-i18n="copyLink"
+                    ></button>
+                </p>
+            </section>
+        </main>
+
+        <div class="locale-bar" id="locale-bar" aria-hidden="true"></div>
+
+        <script src="js/index.min.js"></script>
         <script
-            src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"
+            src="https://unpkg.com/i18next@22.5.0/dist/umd/i18next.min.js"
             defer
         ></script>
-        <script src="js/main.min.js" defer></script>
+        <script
+            src="https://unpkg.com/i18next-http-backend@2.5.1/i18nextHttpBackend.min.js"
+            defer
+        ></script>
     </body>
 </html>

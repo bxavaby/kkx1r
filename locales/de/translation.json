@@ -1,0 +1,19 @@
+{
+  "updatedLabel": "aktualisiert",
+
+  "tagAbout": "über mich",
+  "about": "ich liebe die Kommandozeile, Linux und alles rund um OSS",
+  "tagAvailability": "verfügbarkeit",
+  "availability": "oft frei für Zusammenarbeit und Gespräche",
+  "tagNow": "aktuell",
+  "now": "ich erkunde GLSL und genieße die Sonne",
+  "tagTimezone": "zeitzone",
+
+  "tagProjects": "projekte",
+  "projectOneName": "glock ↗",
+  "projectOneDesc": "angepasste blockchain-implementierung für die kommandozeile, geschrieben in Go",
+  "projectTwoName": "noch ↗",
+  "projectTwoDesc": "literaturarchiv",
+
+  "copyLink": "> link kopieren <"
+}

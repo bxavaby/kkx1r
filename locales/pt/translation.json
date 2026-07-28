@@ -1,0 +1,19 @@
+{
+  "updatedLabel": "atualizado",
+
+  "tagAbout": "sobre",
+  "about": "adoro a linha de comando, Linux e OSS",
+  "tagAvailability": "disponibilidade",
+  "availability": "regularmente livre para colaborar e conversar",
+  "tagNow": "atualmente",
+  "now": "explorando GLSL e aproveitando o sol",
+  "tagTimezone": "fuso horário",
+
+  "tagProjects": "projetos",
+  "projectOneName": "glock ↗",
+  "projectOneDesc": "implementação de blockchain adaptada para a linha de comando, escrita em go",
+  "projectTwoName": "noch ↗",
+  "projectTwoDesc": "arquivo literário",
+
+  "copyLink": "> copiar link <"
+}

@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "personal",
+    "porfolio"
+  ],
   "author": "bxavaby",
   "license": "CC BY-NC 4.0",
   "type": "commonjs"

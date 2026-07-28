@@ -1,0 +1,19 @@
+{
+  "updatedLabel": "updated",
+
+  "tagAbout": "about",
+  "about": "I love the command-line, linux and all-things open-source",
+  "tagAvailability": "availability",
+  "availability": "often free to collaborate and chat",
+  "tagNow": "currently",
+  "now": "exploring glsl and enjoying the sun",
+  "tagTimezone": "timezone",
+
+  "tagProjects": "projects",
+  "projectOneName": "glock ↗",
+  "projectOneDesc": "adapted blockchain implementation for the command-line written in go",
+  "projectTwoName": "noch ↗",
+  "projectTwoDesc": "literary archive",
+
+  "copyLink": "> copy link <"
+}
