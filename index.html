@@ -113,23 +113,46 @@
     <body>
         <main class="screen" id="screen">
             <header class="line line--top">
-                <nav class="locale-nav" aria-label="Language selector">
-                    <button
-                        class="locale-link is-active"
-                        type="button"
-                        data-locale="en"
-                    >
-                        en
-                    </button>
-                    <span class="locale-sep">/</span>
-                    <button class="locale-link" type="button" data-locale="de">
-                        de
-                    </button>
-                    <span class="locale-sep">/</span>
-                    <button class="locale-link" type="button" data-locale="pt">
-                        pt
-                    </button>
-                </nav>
+                <div class="top-right">
+                    <div class="updated">
+                        <span class="updated-label" data-i18n="updatedLabel"
+                            >updated</span
+                        >
+                        <time
+                            class="updated-value"
+                            id="updated-value"
+                            datetime=""
+                        >
+                            08 Aug 2008, 20:08
+                        </time>
+                    </div>
+
+                    <nav class="locale-nav" aria-label="Language selector">
+                        <button
+                            class="locale-link is-active"
+                            type="button"
+                            data-locale="en"
+                        >
+                            en
+                        </button>
+                        <span class="locale-sep">/</span>
+                        <button
+                            class="locale-link"
+                            type="button"
+                            data-locale="de"
+                        >
+                            de
+                        </button>
+                        <span class="locale-sep">/</span>
+                        <button
+                            class="locale-link"
+                            type="button"
+                            data-locale="pt"
+                        >
+                            pt
+                        </button>
+                    </nav>
+                </div>
             </header>
 
             <div class="divider-main"></div>
