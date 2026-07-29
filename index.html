@@ -113,184 +113,199 @@
     <body>
         <main class="screen" id="screen">
             <div class="crt-surface">
-                <header class="line line--top">
-                    <div class="top-right">
-                        <div class="updated">
-                            <span class="updated-label" data-i18n="updatedLabel"
-                                >updated</span
+                <div class="crt-content">
+                    <header class="line line--top">
+                        <div class="top-right">
+                            <div class="updated">
+                                <span
+                                    class="updated-label"
+                                    data-i18n="updatedLabel"
+                                    >updated</span
+                                >
+                                <time
+                                    class="updated-value"
+                                    id="updated-value"
+                                    datetime=""
+                                >
+                                    08 Aug 2008, 20:08
+                                </time>
+                            </div>
+
+                            <nav
+                                class="locale-nav"
+                                aria-label="Language selector"
                             >
-                            <time
-                                class="updated-value"
-                                id="updated-value"
-                                datetime=""
-                            >
-                                08 Aug 2008, 20:08
-                            </time>
+                                <button
+                                    class="locale-link is-active"
+                                    type="button"
+                                    data-locale="en"
+                                >
+                                    en
+                                </button>
+                                <span class="locale-sep">/</span>
+                                <button
+                                    class="locale-link"
+                                    type="button"
+                                    data-locale="de"
+                                >
+                                    de
+                                </button>
+                                <span class="locale-sep">/</span>
+                                <button
+                                    class="locale-link"
+                                    type="button"
+                                    data-locale="pt"
+                                >
+                                    pt
+                                </button>
+                            </nav>
                         </div>
+                    </header>
 
-                        <nav class="locale-nav" aria-label="Language selector">
-                            <button
-                                class="locale-link is-active"
-                                type="button"
-                                data-locale="en"
+                    <div class="divider-main"></div>
+
+                    <section class="panel" aria-label="Profile">
+                        <div class="line">
+                            <span class="tag" data-i18n="tagAbout">about</span>
+                        </div>
+                        <p class="text" data-i18n="about"></p>
+
+                        <div class="line line--gap">
+                            <span class="tag" data-i18n="tagAvailability"
+                                >availability</span
                             >
-                                en
-                            </button>
-                            <span class="locale-sep">/</span>
-                            <button
-                                class="locale-link"
-                                type="button"
-                                data-locale="de"
+                        </div>
+                        <p class="text" data-i18n="availability"></p>
+
+                        <div class="line line--gap">
+                            <span class="tag" data-i18n="tagNow"
+                                >currently</span
                             >
-                                de
-                            </button>
-                            <span class="locale-sep">/</span>
-                            <button
-                                class="locale-link"
-                                type="button"
-                                data-locale="pt"
+                        </div>
+                        <p class="text" data-i18n="now"></p>
+
+                        <div class="line line--gap">
+                            <span class="tag" data-i18n="tagTimezone"
+                                >timezone</span
                             >
-                                pt
-                            </button>
-                        </nav>
-                    </div>
-                </header>
+                        </div>
+                        <p class="text">
+                            <time datetime="+02:00"> CEST (UTC+2) </time>
+                        </p>
 
-                <div class="divider-main"></div>
+                        <div class="divider"></div>
 
-                <section class="panel" aria-label="Profile">
-                    <div class="line">
-                        <span class="tag" data-i18n="tagAbout">about</span>
-                    </div>
-                    <p class="text" data-i18n="about"></p>
-
-                    <div class="line line--gap">
-                        <span class="tag" data-i18n="tagAvailability"
-                            >availability</span
-                        >
-                    </div>
-                    <p class="text" data-i18n="availability"></p>
-
-                    <div class="line line--gap">
-                        <span class="tag" data-i18n="tagNow">currently</span>
-                    </div>
-                    <p class="text" data-i18n="now"></p>
-
-                    <div class="line line--gap">
-                        <span class="tag" data-i18n="tagTimezone"
-                            >timezone</span
-                        >
-                    </div>
-                    <p class="text">
-                        <time datetime="+02:00"> CEST (UTC+2) </time>
-                    </p>
-
-                    <div class="divider"></div>
-
-                    <!-- <div class="line line--gap">
+                        <!-- <div class="line line--gap">
                     <span class="tag" data-i18n="tagProjects">projects</span>
                     </div> -->
 
-                    <div class="project-list">
-                        <article class="project-item">
-                            <a
-                                class="project-name link project-link"
-                                href="https://github.com/bxavaby/glock"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Open glock"
-                                data-i18n="projectOneName"
-                            >
-                                name
-                            </a>
-                            <p class="project-desc" data-i18n="projectOneDesc">
-                                description
-                            </p>
-                        </article>
+                        <div class="project-list">
+                            <article class="project-item">
+                                <a
+                                    class="project-name link project-link"
+                                    href="https://github.com/bxavaby/glock"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open glock"
+                                    data-i18n="projectOneName"
+                                >
+                                    name
+                                </a>
+                                <p
+                                    class="project-desc"
+                                    data-i18n="projectOneDesc"
+                                >
+                                    description
+                                </p>
+                            </article>
 
-                        <article class="project-item">
-                            <a
-                                class="project-name link project-link"
-                                href="https://kixkux.codeberg.page/noch/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Open noch"
-                                data-i18n="projectTwoName"
-                            >
-                                name
-                            </a>
-                            <p class="project-desc" data-i18n="projectTwoDesc">
-                                description
-                            </p>
-                        </article>
-                    </div>
+                            <article class="project-item">
+                                <a
+                                    class="project-name link project-link"
+                                    href="https://kixkux.codeberg.page/noch/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Open noch"
+                                    data-i18n="projectTwoName"
+                                >
+                                    name
+                                </a>
+                                <p
+                                    class="project-desc"
+                                    data-i18n="projectTwoDesc"
+                                >
+                                    description
+                                </p>
+                            </article>
+                        </div>
 
-                    <div class="divider"></div>
+                        <div class="divider"></div>
 
-                    <div class="line line--gap">
-                        <span class="tag">email</span>
-                    </div>
-                    <p class="text">
-                        <a
-                            href="mailto:kixkux@pm.me"
-                            class="link"
-                            aria-label="Email kixkux@pm.me"
-                        >
-                            kixkux@pm.me
-                        </a>
-                    </p>
-
-                    <div class="line line--gap">
-                        <span class="tag">codeberg</span>
-                    </div>
-                    <p class="text">
-                        <a
-                            href="https://codeberg.org/kixkux"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="link"
-                            aria-label="Open Codeberg profile"
-                        >
-                            codeberg.org/kixkux
-                        </a>
-                    </p>
-
-                    <div class="line line--gap line--lichess">
-                        <span class="tag"> lichess </span>
+                        <div class="line line--gap">
+                            <span class="tag">email</span>
+                        </div>
                         <p class="text">
-                            [blitz
-                            <span
-                                class="rating-inline"
-                                data-blitz-rating
-                                aria-live="polite"
-                                >…</span
-                            >]
+                            <a
+                                href="mailto:kixkux@pm.me"
+                                class="link"
+                                aria-label="Email kixkux@pm.me"
+                            >
+                                kixkux@pm.me
+                            </a>
                         </p>
-                    </div>
-                    <p class="text">
-                        <a
-                            href="https://lichess.org/@/v7h0rn"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="link"
-                            aria-label="Open Lichess profile v7h0rn"
-                        >
-                            lichess.org/@/v7h0rn
-                        </a>
-                    </p>
 
-                    <div class="line line--gap">
-                        <span class="tag">share</span>
-                    </div>
-                    <p class="text share-actions">
-                        <button
-                            type="button"
-                            class="link link-button"
-                            id="copy-link"
-                            data-i18n="copyLink"
-                        ></button>
-                    </p>
-                </section>
+                        <div class="line line--gap">
+                            <span class="tag">codeberg</span>
+                        </div>
+                        <p class="text">
+                            <a
+                                href="https://codeberg.org/kixkux"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="link"
+                                aria-label="Open Codeberg profile"
+                            >
+                                codeberg.org/kixkux
+                            </a>
+                        </p>
+
+                        <div class="line line--gap line--lichess">
+                            <span class="tag"> lichess </span>
+                            <p class="text">
+                                [blitz
+                                <span
+                                    class="rating-inline"
+                                    data-blitz-rating
+                                    aria-live="polite"
+                                    >…</span
+                                >]
+                            </p>
+                        </div>
+                        <p class="text">
+                            <a
+                                href="https://lichess.org/@/v7h0rn"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="link"
+                                aria-label="Open Lichess profile v7h0rn"
+                            >
+                                lichess.org/@/v7h0rn
+                            </a>
+                        </p>
+
+                        <div class="line line--gap">
+                            <span class="tag">share</span>
+                        </div>
+                        <p class="text share-actions">
+                            <button
+                                type="button"
+                                class="link link-button"
+                                id="copy-link"
+                                data-i18n="copyLink"
+                            ></button>
+                        </p>
+                    </section>
+                </div>
             </div>
         </main>
 
