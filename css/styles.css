@@ -18,12 +18,31 @@
     --anim-fast: 180ms cubic-bezier(0.22, 1, 0.36, 1);
     --anim-slow: 320ms cubic-bezier(0.22, 1, 0.36, 1);
 
-    --screen-height: 36rem;
-    --screen-width: min(680px, 100%);
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+
+    --viewport-pad-x: 16px;
+    --viewport-pad-top: 12px;
+    --viewport-pad-bottom: 18px;
+
+    --card-radius: 8px;
+    --frame-inset: 3px;
+    --frame-width: 1px;
+    --surface-inset: calc(var(--frame-inset) + var(--frame-width));
+
+    --content-pad-x: clamp(12px, 4vw, 18px);
+    --content-pad-y: clamp(10px, 1.8dvh, 16px);
 
     --text-xs: clamp(0.6rem, 0.5rem + 0.2vw, 0.7rem);
     --text-sm: clamp(0.68rem, 0.6rem + 0.2vw, 0.78rem);
     --text-base: clamp(0.74rem, 0.65rem + 0.25vw, 0.86rem);
+
+    --space-1: 2px;
+    --space-2: 6px;
+    --space-3: 10px;
+    --space-4: 14px;
 }
 
 * {
@@ -33,17 +52,22 @@
 html,
 body {
     margin: 0;
-    padding: 0;
+    block-size: 100%;
+    overflow: hidden;
     background-color: var(--bg);
     color: var(--txt);
 }
 
 body {
-    min-height: 100dvh;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding: 0;
+    min-block-size: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: calc(var(--safe-top) + var(--viewport-pad-top))
+        calc(var(--safe-right) + var(--viewport-pad-x))
+        calc(var(--safe-bottom) + var(--viewport-pad-bottom))
+        calc(var(--safe-left) + var(--viewport-pad-x));
+    overscroll-behavior: none;
+
     background:
         radial-gradient(
             circle at bottom,
@@ -75,14 +99,13 @@ body {
 }
 
 .screen {
-    flex: 1;
-    max-width: 393px;
-    margin: 96px 16px 56px;
-    min-height: calc(100dvh - 96px - 56px);
-    max-height: 640px;
-    padding: 0;
+    position: relative;
+    isolation: isolate;
+    inline-size: min(100%, 393px);
+    block-size: min(100%, 760px);
+    border-radius: var(--card-radius);
+
     overflow: hidden;
-    border-radius: 8px;
     background: color-mix(in srgb, var(--bg) 92%, black);
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--acc) 28%, transparent),
@@ -90,44 +113,52 @@ body {
 }
 
 @media (min-width: 768px) {
-    body {
-        place-items: center;
-    }
-
     .screen {
-        margin: 32px;
-        max-width: 480px;
-        height: 640px;
+        inline-size: min(100%, 480px);
+        block-size: min(100%, 760px);
+    }
+}
+
+@media (max-height: 760px) {
+    :root {
+        --viewport-pad-top: 8px;
+        --viewport-pad-bottom: 14px;
+        --content-pad-x: 14px;
+        --content-pad-y: 10px;
+        --text-xs: 0.62rem;
+        --text-sm: 0.7rem;
+        --text-base: 0.74rem;
     }
 }
 
 .screen::before {
     content: "";
     position: absolute;
-    inset: 6px;
-    border-radius: inherit;
-    border: 2px solid color-mix(in srgb, var(--acc) 48%, transparent);
+    inset: var(--frame-inset);
+    border-radius: calc(var(--card-radius) - var(--frame-inset));
+    border: var(--frame-width) solid
+        color-mix(in srgb, var(--acc) 56%, transparent);
     pointer-events: none;
     z-index: 6;
 }
 
 .crt-surface {
-    position: relative;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: var(--surface-inset);
+    border-radius: calc(var(--card-radius) - var(--surface-inset));
+    overflow: hidden;
     background:
         radial-gradient(
-            circle at top center,
-            var(--sec) 0%,
-            #000 40%,
-            #000 100%
+            circle at 50% -14%,
+            color-mix(in srgb, var(--bg) 88%, transparent) 0,
+            transparent 48%
         ),
         radial-gradient(
-            circle at bottom center,
-            var(--sec) 0%,
-            #000 40%,
-            #000 100%
-        );
+            circle at 50% 114%,
+            color-mix(in srgb, var(--bg) 88%, transparent) 0,
+            transparent 48%
+        ),
+        linear-gradient(180deg, var(--sec) 0%, var(--sec) 100%);
 }
 
 .crt-surface::before {
@@ -137,13 +168,13 @@ body {
     pointer-events: none;
     background: repeating-linear-gradient(
         to bottom,
-        rgba(255, 255, 255, 0.08) 0,
-        rgba(255, 255, 255, 0.08) 1px,
+        rgba(255, 255, 255, 0.11) 0,
+        rgba(255, 255, 255, 0.11) 1px,
         rgba(0, 0, 0, 0) 1px,
         rgba(0, 0, 0, 0) 3px
     );
     mix-blend-mode: screen;
-    opacity: 0.6;
+    opacity: 0.69;
 }
 
 .crt-surface::after {
@@ -154,35 +185,37 @@ body {
     background:
         radial-gradient(
             circle at center,
-            rgba(255, 255, 255, 0.04),
-            transparent 60%
+            rgba(255, 255, 255, 0.05),
+            transparent 58%
         ),
         linear-gradient(
             to bottom,
-            rgba(255, 255, 255, 0.035),
-            rgba(0, 0, 0, 0.4)
+            rgba(255, 255, 255, 0.04),
+            rgba(0, 0, 0, 0.42)
         );
     mix-blend-mode: screen;
-    opacity: 0.5;
+    opacity: 0.55;
     animation: crt-flicker 0.12s infinite alternate;
 }
 
 @keyframes crt-flicker {
     0% {
-        opacity: 0.45;
+        opacity: 0.48;
         transform: translateY(0);
     }
     100% {
-        opacity: 0.55;
+        opacity: 0.58;
         transform: translateY(0.5px);
     }
 }
 
 .crt-content {
     position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 18px 20px 16px;
+    z-index: 1;
+    block-size: 100%;
+    padding: var(--content-pad-y) var(--content-pad-x);
+    display: grid;
+    grid-template-rows: auto auto 1fr;
 }
 
 /*
