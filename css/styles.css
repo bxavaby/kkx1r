@@ -239,7 +239,7 @@ body {
     z-index: 3;
     pointer-events: none;
     transform: translateY(100%);
-    background-color: var(--bg);
+    background-color: var(--sec);
     opacity: 0;
 }
 
@@ -275,7 +275,7 @@ body {
 .project-desc,
 .project-link {
     margin: 0;
-    font-size: 0.76rem;
+    font-size: var(--text-base);
     line-height: 1.45;
 }
 
@@ -304,7 +304,6 @@ body {
 .rating-inline {
     color: var(--acc);
     font-size: var(--text-xs);
-    letter-spacing: 0.04em;
 }
 
 .share-actions {
@@ -354,8 +353,7 @@ body {
     display: flex;
     align-items: baseline;
     gap: 6px;
-    font-size: 0.64rem;
-    letter-spacing: 0.08em;
+    font-size: var(--text-xs);
     text-transform: lowercase;
 }
 
@@ -365,7 +363,6 @@ body {
 
 .updated-value {
     color: var(--acc);
-    font-size: 0.64rem;
 }
 
 .panel {
@@ -409,15 +406,13 @@ body {
 .tag {
     text-transform: lowercase;
     color: var(--acc);
-    font-size: 0.69rem;
-    letter-spacing: 0.12em;
+    font-size: var(--text-xs);
 }
 
 .text {
     margin: 0;
     margin-top: 3px;
-    font-size: 0.68rem;
-    letter-spacing: 0.02em;
+    font-size: var(--text-base);
     line-height: 1.2;
 }
 
