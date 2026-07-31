@@ -15,5 +15,9 @@
   "projectTwoName": "noch ↗",
   "projectTwoDesc": "literaturarchiv",
 
-  "copyLink": "> link kopieren <"
+  "copyLink": "> link kopieren <",
+
+  "stackDistros": "distros",
+  "stackLangs": "programmiersprachen",
+  "stackTools": "tools"
 }

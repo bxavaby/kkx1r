@@ -15,5 +15,9 @@
   "projectTwoName": "noch ↗",
   "projectTwoDesc": "literary archive",
 
-  "copyLink": "> copy link <"
+  "copyLink": "> copy link <",
+
+  "stackDistros": "distros",
+  "stackLangs": "langs",
+  "stackTools": "tools"
 }
