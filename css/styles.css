@@ -10,6 +10,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "BerlinFraktur";
+    src: url("../fonts/BerlinFraktur-24.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     color-scheme: dark;
     font-family:
@@ -368,12 +376,41 @@ body {
 }
 
 .line--top {
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: var(--space-4);
 }
 
 .line--gap {
     margin-top: var(--space-3);
+}
+
+.brand {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.brand-logo {
+    font-family: "BerlinFraktur", monospace;
+    font-size: clamp(1rem, 0.9rem + 0.6vw, 1.2rem);
+    letter-spacing: 0.28em;
+    text-transform: none;
+    background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--acc) 55%, white) 0%,
+        var(--acc) 30%,
+        color-mix(in srgb, var(--acc) 65%, black) 48%,
+        color-mix(in srgb, var(--acc) 85%, white) 58%,
+        var(--acc) 78%,
+        color-mix(in srgb, var(--acc) 45%, black) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--acc);
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.9));
 }
 
 .top-right {
@@ -439,7 +476,8 @@ body {
 
 .tag {
     text-transform: lowercase;
-    font-size: var(--text-ms);
+    font-size: var(--text-sm);
+    /*
     background: linear-gradient(
         180deg,
         color-mix(in srgb, var(--acc) 40%, white) 0%,
@@ -452,9 +490,11 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: var(--acc);
     filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.8));
     -webkit-font-smoothing: antialiased;
+    */
+    color: var(--acc);
+    margin: 0;
 }
 
 .text {
@@ -491,59 +531,36 @@ body {
 }
 
 .mg-1 {
-    stop-color: color-mix(in srgb, var(--sec) 40%, white);
+    stop-color: color-mix(in srgb, var(--acc) 40%, white);
 }
 
 .mg-2 {
-    stop-color: var(--sec);
+    stop-color: var(--acc);
 }
 
 .mg-3 {
-    stop-color: color-mix(in srgb, var(--sec) 60%, black);
+    stop-color: color-mix(in srgb, var(--acc) 60%, black);
 }
 
 .mg-4 {
-    stop-color: color-mix(in srgb, var(--sec) 80%, white);
+    stop-color: color-mix(in srgb, var(--acc) 80%, white);
 }
 
 .mg-5 {
-    stop-color: color-mix(in srgb, var(--sec) 45%, black);
-}
-
-.stack {
-    margin-top: var(--space-2);
-}
-
-.stack-groups {
-    display: grid;
-    gap: var(--space-3);
-    margin-top: var(--space-2);
-}
-
-.stack-group {
-    display: grid;
-    gap: 6px;
-}
-
-.stack-label {
-    margin: 0;
-    font-size: var(--text-xs);
-    letter-spacing: 0.1em;
-    text-transform: lowercase;
-    color: color-mix(in srgb, var(--txt) 62%, transparent);
+    stop-color: color-mix(in srgb, var(--acc) 45%, black);
 }
 
 .stack-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
     margin: 0;
     padding: 0;
+    gap: 6px;
     list-style: none;
 }
 
 .tech-chip {
-    --chip-size: 38px;
+    --chip-size: 34px;
 
     position: relative;
     display: grid;
@@ -558,7 +575,7 @@ body {
     inset: 0;
     inline-size: 100%;
     block-size: 100%;
-    animation: frame-spin 16s linear infinite;
+    /* animation: frame-spin 16s linear infinite; */ /* bring back if wanted */
     transform-origin: 50% 50%;
     will-change: transform;
 }
@@ -570,7 +587,7 @@ body {
         transparent
     ); /* switch to none if desired */
     stroke: url(#metallic-acc);
-    stroke-width: 8; /* switch to 6 if using --acc */
+    stroke-width: 4; /* switch to 8 if using --sec */
 }
 
 .tech-icon {
@@ -579,13 +596,13 @@ body {
     place-items: center;
     inline-size: 50%;
     block-size: 50%;
-    color: var(--acc);
+    /* color: var(--acc); */
 }
 
 .tech-icon svg {
     width: 100%;
     height: 100%;
-    fill: currentColor;
+    fill: url(#metallic-icon); /* from currentColor */
     display: block;
 }
 
@@ -595,13 +612,13 @@ body {
     }
 
     to {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
 
 @media (max-width: 400px) {
     .tech-chip {
-        --chip-size: 34px;
+        --chip-size: 32px;
     }
 }
 
