@@ -17,6 +17,7 @@
 
   "copyLink": "> copy link <",
 
+  "techStack": "stack",
   "stackDistros": "distros",
   "stackLangs": "langs",
   "stackTools": "tools"
