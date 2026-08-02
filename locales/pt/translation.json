@@ -16,6 +16,9 @@
   "projectTwoDesc": "arquivo literário",
 
   "copyLink": "> copiar link <",
+  "copyCurl": "> copiar curl <",
+  "shareNative": "> partilhar <",
+  "shareText": "Novo cartão. Que achas?",
 
   "techStack": "stack",
   "stackDistros": "distros",

@@ -659,6 +659,70 @@ body {
     }
 }
 
+/* on click chip overlay */
+.stack-overlay {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+    border-radius: var(--card-radius);
+}
+
+.stack-overlay.is-active {
+    display: flex;
+}
+
+.stack-overlay__inner {
+    text-align: center;
+}
+
+.stack-overlay__icon.tech-icon {
+    inline-size: 72px;
+    block-size: 72px;
+    margin-inline: auto;
+    margin-bottom: var(--space-4);
+}
+
+.stack-overlay__name {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-base);
+    text-transform: lowercase;
+    color: var(--acc);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.stack-overlay__progress {
+    inline-size: 120px;
+    block-size: 3px;
+    margin-inline: auto;
+    background: rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    border-radius: 999px;
+}
+
+.stack-overlay__progress-bar {
+    inline-size: 0%;
+    block-size: 100%;
+    background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--acc) 40%, white),
+        color-mix(in srgb, var(--acc) 80%, black)
+    );
+    transform-origin: left center;
+    animation: stack-progress 1.8s linear forwards;
+}
+
+@keyframes stack-progress {
+    to {
+        inline-size: 100%;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     body,
     .screen,

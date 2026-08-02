@@ -431,6 +431,7 @@
                                         ></polygon>
                                     </svg>
                                     <span class="tech-icon">
+                                        <!--
                                         <svg viewBox="0 0 128 128">
                                             <g fill-rule="evenodd">
                                                 <path
@@ -440,6 +441,25 @@
                                                     d="M99.64 87.253c-5.515-.122-10.546-1.697-14.788-5.334-3.576-3.09-5.818-7.03-6.545-11.697-1.091-6.848.787-12.909 4.909-18.302 4.424-5.819 9.757-8.849 16.97-10.122 6.181-1.09 12-.484 17.272 3.091 4.788 3.273 7.757 7.697 8.545 13.515 1.03 8.182-1.333 14.849-6.97 20.546-4 4.06-8.909 6.606-14.545 7.757-1.636.303-3.273.364-4.848.546zm14.424-24.485c-.06-.788-.06-1.394-.182-2-1.09-6-6.606-9.394-12.363-8.06-5.637 1.272-9.273 4.848-10.606 10.545-1.091 4.727 1.212 9.515 5.575 11.454 3.334 1.455 6.667 1.273 9.879-.363 4.788-2.485 7.394-6.364 7.697-11.576z"
                                                 ></path>
                                             </g>
+                                        </svg>
+                                        -->
+
+                                        <svg
+                                            height="1250"
+                                            viewBox="16.8 16.1 72.9 27.6"
+                                            width="2500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <switch>
+                                                <g>
+                                                    <path
+                                                        d="m22.3 24.7c-.1 0-.2-.1-.1-.2l.7-1c.1-.1.2-.2.4-.2h12.6c.1 0 .2.1.1.2l-.6.9c-.1.1-.2.2-.4.2zm-5.3 3.2c-.1 0-.2-.1-.1-.2l.7-1c.1-.1.2-.2.4-.2h16.1c.1 0 .2.1.2.2l-.3 1c0 .1-.2.2-.3.2zm8.5 3.3c-.1 0-.2-.1-.1-.2l.5-.9c.1-.1.2-.2.4-.2h7c.1 0 .2.1.2.2l-.1.8c0 .1-.1.2-.2.2zm36.6-7.2-5.9 1.5c-.5.1-.6.2-1-.4-.5-.6-.9-1-1.7-1.3-2.2-1.1-4.4-.8-6.4.5-2.4 1.5-3.6 3.8-3.6 6.7 0 2.8 2 5.1 4.8 5.5 2.4.3 4.4-.5 6-2.3.3-.4.6-.8 1-1.3h-6.8c-.7 0-.9-.5-.7-1.1.5-1.1 1.3-2.9 1.8-3.8.1-.2.4-.6.9-.6h12.8c-.1 1-.1 1.9-.2 2.9-.4 2.5-1.3 4.9-2.9 6.9-2.5 3.3-5.8 5.4-10 6-3.5.5-6.7-.2-9.5-2.3-2.6-2-4.1-4.6-4.5-7.8-.5-3.8.7-7.3 3-10.3 2.5-3.3 5.8-5.4 9.9-6.1 3.3-.6 6.5-.2 9.3 1.7 1.9 1.2 3.2 2.9 4.1 5 .1.4 0 .5-.4.6z"
+                                                    />
+                                                    <path
+                                                        d="m73.7 43.5c-3.2-.1-6.1-1-8.6-3.1-2.1-1.8-3.4-4.1-3.8-6.8-.6-4 .5-7.5 2.9-10.6 2.6-3.4 5.7-5.1 9.9-5.9 3.6-.6 7-.3 10 1.8 2.8 1.9 4.5 4.5 5 7.9.6 4.8-.8 8.6-4 11.9-2.3 2.4-5.2 3.8-8.4 4.5-1.1.2-2.1.2-3 .3zm8.4-14.2c0-.5 0-.8-.1-1.2-.6-3.5-3.8-5.5-7.2-4.7-3.3.7-5.4 2.8-6.2 6.1-.6 2.7.7 5.5 3.2 6.7 1.9.8 3.9.7 5.7-.2 2.9-1.4 4.4-3.7 4.6-6.7z"
+                                                    />
+                                                </g>
+                                            </switch>
                                         </svg>
                                     </span>
                                 </li>
@@ -619,15 +639,33 @@
                             </a>
                         </p>
 
-                        <div class="line line--gap">
-                            <span class="tag">share</span>
-                        </div>
+                        <div class="divider"></div>
+                        <div class="line line--gap"></div>
+
                         <p class="text share-actions">
                             <button
                                 type="button"
                                 class="link link-button"
                                 id="copy-link"
                                 data-i18n="copyLink"
+                            ></button>
+                            <!--
+                            <span class="share-sep">/</span>
+                            <button
+                                type="button"
+                                class="link link-button"
+                                id="copy-curl"
+                                data-i18n="copyCurl"
+                            >
+
+                            </button>
+                            -->
+                            <span class="share-sep">/</span>
+                            <button
+                                type="button"
+                                class="link link-button"
+                                id="native-share"
+                                data-i18n="shareNative"
                             ></button>
                         </p>
                     </section>
@@ -642,6 +680,26 @@
                         <p class="text">coming soon... maybe not</p>
                     </section>
                     -->
+
+                    <div
+                        class="stack-overlay"
+                        id="stack-overlay"
+                        aria-hidden="true"
+                    >
+                        <div class="stack-overlay__inner">
+                            <div
+                                class="stack-overlay__icon tech-icon"
+                                id="stack-overlay-icon"
+                            ></div>
+                            <p
+                                class="stack-overlay__name"
+                                id="stack-overlay-name"
+                            ></p>
+                            <div class="stack-overlay__progress">
+                                <div class="stack-overlay__progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

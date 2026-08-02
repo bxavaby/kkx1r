@@ -16,6 +16,9 @@
   "projectTwoDesc": "literaturarchiv",
 
   "copyLink": "> link kopieren <",
+  "copyCurl": "> curl kopieren <",
+  "shareNative": "> teilen <",
+  "shareText": "Neue Karte. Was hältst du davon?",
 
   "techStack": "stack",
   "stackDistros": "distros",
