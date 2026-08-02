@@ -148,6 +148,18 @@ body {
     border-radius: calc(var(--card-radius) - var(--frame-inset));
     border: var(--frame-width) solid
         color-mix(in srgb, var(--acc) 56%, transparent);
+
+    /*
+    border: 1px solid transparent;
+    border-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--acc) 40%, black),
+        color-mix(in srgb, var(--acc) 80%, white),
+        color-mix(in srgb, var(--acc) 50%, black)
+    );
+    border-image-slice: 1;
+    */
+
     pointer-events: none;
     z-index: 6;
 }
@@ -394,7 +406,7 @@ body {
 
 .brand-logo {
     font-family: "BerlinFraktur", monospace;
-    font-size: clamp(1rem, 0.9rem + 0.6vw, 1.2rem);
+    font-size: clamp(1.1rem, 1rem + 0.69vw, 1.25rem);
     letter-spacing: 0.28em;
     text-transform: none;
     background: linear-gradient(
@@ -473,6 +485,25 @@ body {
 .screen.is-gesture .panel {
     transition: none;
 }
+
+/*
+.panel--back {
+    position: absolute;
+    inset: var(--content-pad-y) var(--content-pad-x);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.screen.is-flipped .panel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.screen.is-flipped .panel--back {
+    opacity: 1;
+    pointer-events: auto;
+}
+*/
 
 .tag {
     text-transform: lowercase;
@@ -587,7 +618,7 @@ body {
         transparent
     ); /* switch to none if desired */
     stroke: url(#metallic-acc);
-    stroke-width: 4; /* switch to 8 if using --sec */
+    stroke-width: 6; /* switch to 8 if using --sec */
 }
 
 .tech-icon {

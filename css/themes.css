@@ -2,25 +2,25 @@
 .en {
     --bg: oklch(0 0 0);
     --bg-meta: #000000;
-    --txt: #ffffff;
-    --acc: #b2b2b2;
-    --sec: #121;
+    --txt: #fefff2;
+    --acc: #e40000;
+    --sec: #111; /* #25262d is also nice */
 }
 
 /* Palette::locale::german */
 .de {
     --bg: oklch(0 0 0);
     --bg-meta: #000000;
-    --txt: #fefff2;
-    --acc: #ff604a;
-    --sec: #111;
+    --txt: #ffffff;
+    --acc: #b2b2b2;
+    --sec: #121;
 }
 
 /* Palette::locale::portuguese */
 .pt {
     --bg: oklch(0 0 0);
     --bg-meta: #000000;
-    --txt: #ffffff;
-    --acc: #b548c9;
-    --sec: #112;
+    --txt: #f0f8ff;
+    --acc: #7eacb5;
+    --sec: #112; /* #1b242a is also nice */
 }
