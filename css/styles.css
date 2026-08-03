@@ -120,6 +120,17 @@ body {
     box-shadow:
         0 0 0 1px color-mix(in srgb, var(--acc) 28%, transparent),
         0 16px 45px rgb(0 0 0 / 0.9);
+
+    transform: translateY(28px);
+    opacity: 0;
+    animation: screen-in 280ms var(--anim-fast) forwards;
+}
+
+@keyframes screen-in {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (min-width: 768px) {
@@ -216,8 +227,16 @@ body {
             rgba(0, 0, 0, 0.42)
         );
     mix-blend-mode: screen;
-    opacity: 0.55;
-    animation: crt-flicker 0.12s infinite alternate;
+    opacity: 0;
+    animation:
+        crt-scan-in 280ms ease-out forwards 280ms,
+        crt-flicker 0.12s infinite alternate 540ms;
+}
+
+@keyframes crt-scan-in {
+    to {
+        opacity: 0.55;
+    }
 }
 
 @keyframes crt-flicker {
