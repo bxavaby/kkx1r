@@ -155,6 +155,23 @@ body {
     }
 }
 
+@media (max-height: 680px) {
+    :root {
+        --space-3: 8px;
+        --space-4: 12px;
+    }
+}
+
+@media (max-height: 620px) {
+    :root {
+        --content-pad-y: 8px;
+        --space-3: 6px;
+    }
+    .tech-chip {
+        --chip-size: 30px;
+    }
+}
+
 .screen::before {
     content: "";
     position: absolute;
@@ -574,6 +591,48 @@ body {
     min-width: 3ch;
     display: inline-block;
     text-align: right;
+}
+
+.contact-value {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.vcard-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 20px;
+    block-size: 20px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--acc) 40%, black),
+        color-mix(in srgb, var(--acc) 80%, white),
+        color-mix(in srgb, var(--acc) 50%, black)
+    );
+    border-image-slice: 1;
+    background: color-mix(in srgb, var(--sec) 18%, transparent);
+    color: var(--acc);
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition:
+        background var(--anim-fast),
+        border-color var(--anim-fast),
+        transform var(--anim-fast);
+}
+
+.vcard-icon {
+    inline-size: 11px;
+    block-size: 11px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .metallic-defs {

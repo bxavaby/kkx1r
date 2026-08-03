@@ -200,7 +200,7 @@
 
                     <section class="panel" aria-label="Profile">
                         <div class="line">
-                            <span class="tag" data-i18n="tagAbout">about</span>
+                            <!-- <span class="tag" data-i18n="tagAbout">about</span> -->
                         </div>
                         <p class="text" data-i18n="about"></p>
 
@@ -320,8 +320,8 @@
                                 <p class="tag" data-i18n="stackDistros">
                                     distros
                                 </p>
-                                -->
                                 <p class="tag" data-i18n="techStack">stack</p>
+                                -->
                             </div>
                             <ul class="stack-row" role="list">
                                 <li class="tech-chip" title="Arch Linux">
@@ -397,6 +397,9 @@
                                 <p class="tag" data-i18n="stackLangs">langs</p>
                             </div>
                             -->
+
+                            <div class="line line--gap"></div>
+
                             <ul class="stack-row" role="list">
                                 <li class="tech-chip" title="Bash">
                                     <svg
@@ -515,6 +518,9 @@
                                 <p class="tag" data-i18n="stackTools">tools</p>
                             </div>
                             -->
+
+                            <div class="line line--gap"></div>
+
                             <ul class="stack-row" role="list">
                                 <li class="tech-chip" title="Git">
                                     <svg
@@ -586,23 +592,45 @@
                         </section>
 
                         <div class="divider"></div>
+                        <div class="line line--gap"></div>
 
-                        <div class="line line--gap">
-                            <span class="tag">email</span>
-                        </div>
-                        <p class="text">
-                            <a
-                                href="mailto:kixkux@pm.me"
-                                class="link"
-                                aria-label="Email kixkux@pm.me"
+                        <span class="contact-value">
+                            <p class="text">
+                                <a
+                                    href="mailto:kixkux@pm.me"
+                                    class="link"
+                                    aria-label="Email kixkux@pm.me"
+                                >
+                                    kixkux@pm.me
+                                </a>
+                            </p>
+                            <button
+                                type="button"
+                                class="vcard-btn"
+                                id="save-contact"
+                                aria-label="Save contact card"
+                                title="Save contact (.vcf)"
                             >
-                                kixkux@pm.me
-                            </a>
-                        </p>
+                                <svg
+                                    class="w-6 h-6 text-gray-800 dark:text-white"
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </button>
+                        </span>
 
-                        <div class="line line--gap">
-                            <span class="tag">codeberg</span>
-                        </div>
+                        <div class="line line--gap"></div>
+
                         <p class="text">
                             <a
                                 href="https://codeberg.org/kixkux"
@@ -616,7 +644,7 @@
                         </p>
 
                         <div class="line line--gap line--lichess">
-                            <span class="tag"> lichess </span>
+                            <!-- <span class="tag"> lichess </span>
                             <p class="text">
                                 [blitz
                                 <span
@@ -625,7 +653,7 @@
                                     aria-live="polite"
                                     >…</span
                                 >]
-                            </p>
+                            </p> -->
                         </div>
                         <p class="text">
                             <a
@@ -633,7 +661,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="link"
-                                aria-label="Open Lichess profile v7h0rn"
+                                aria-label="Open lichess profile"
                             >
                                 lichess.org/@/v7h0rn
                             </a>
@@ -657,7 +685,6 @@
                                 id="copy-curl"
                                 data-i18n="copyCurl"
                             >
-
                             </button>
                             -->
                             <span class="share-sep">/</span>
