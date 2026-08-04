@@ -4,11 +4,11 @@
   "updatedLabel": "upd",
 
   "tagAbout": "about",
-  "about": "I love the command-line, linux and all-things open-source",
+  "about": "I love the command-line, Linux and all-things libreware! here's a page: <a href=\"https://codeberg.org/kixkux\" class=\"link\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open Codeberg profile\">codeberg.org/kixkux</a>",
   "tagAvailability": "availability",
-  "availability": "often free to collaborate and chat",
+  "availability": "often free to collaborate and chat, please contact <a href=\"mailto:kixkux@pm.me\" class=\"link\" aria-label=\"Email kixkux@pm.me\">kixkux@pm.me</a>",
   "tagNow": "currently",
-  "now": "exploring glsl and enjoying the sun",
+  "now": "exploring GLSL, enjoying the sun and modestly grinding [<span class=\"rating-inline\" data-blitz-rating aria-live=\"polite\">…</span> blitz] <a href=\"https://lichess.org/@/v7h0rn\" class=\"link\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"Open lichess profile\">lichess.org/@/v7h0rn</a>",
   "tagTimezone": "timezone",
 
   "tagProjects": "projects",
@@ -17,9 +17,9 @@
   "projectTwoName": "noch ↗",
   "projectTwoDesc": "literary archive",
 
-  "copyLink": "> copy link <",
-  "copyCurl": "> copy curl <",
-  "shareNative": "> share <",
+  "copyLink": "copy link",
+  "copyCurl": "copy curl",
+  "shareNative": "share",
   "shareText": "New card. What do you think?",
 
   "techStack": "stack",
