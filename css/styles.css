@@ -396,6 +396,7 @@ body {
 }
 
 .rating-inline {
+    min-width: 5ch;
     color: var(--acc);
     font-size: var(--text-xs);
 }
@@ -486,6 +487,7 @@ body {
 
 .updated-value {
     color: var(--acc);
+    min-width: 9ch;
 }
 
 .panel {
@@ -514,6 +516,11 @@ body {
     );
     transform: translateY(-120%);
     animation: crt-sweep 7s linear infinite;
+    animation-play-state: paused;
+}
+
+.screen.is-ready .panel::after {
+    animation-play-state: running;
 }
 
 @keyframes crt-sweep {

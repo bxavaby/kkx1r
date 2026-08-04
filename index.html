@@ -70,6 +70,9 @@
         <meta name="apple-mobile-web-app-title" content="x1r" />
         <link rel="manifest" href="assets/fi-2/site.webmanifest" />
 
+        <link rel="preconnect" href="https://lichess.org" crossorigin />
+        <link rel="preconnect" href="https://api.github.com" />
+
         <link
             rel="preload"
             href="fonts/BerlinFraktur-24.woff2"
@@ -727,7 +730,7 @@
 
         <div class="locale-bar" id="locale-bar" aria-hidden="true"></div>
 
-        <script src="js/index.min.js"></script>
+        <script src="js/index.min.js" defer></script>
         <script
             src="https://unpkg.com/i18next@22.5.0/dist/umd/i18next.min.js"
             defer
