@@ -3,8 +3,20 @@
     --bg: oklch(0 0 0);
     --bg-meta: #000000;
     --txt: #fefff2;
+    --acc: #ff604a;
+    --sec: #10121c;
+
+    /* Nice alternative
+    --txt: #d2ffc6;
+    --acc: #c23a3a;
+    --sec: #030031;
+    */
+
+    /* Another
+    --txt: #fefff2;
     --acc: #e40000;
-    --sec: #111; /* #25262d is also nice */
+    --sec: #111;
+    */
 }
 
 /* Palette::locale::german */
@@ -13,7 +25,13 @@
     --bg-meta: #000000;
     --txt: #ffffff;
     --acc: #b2b2b2;
-    --sec: #121;
+    --sec: #000000; /* #121 for some color */
+
+    /* Nice alternative
+    --txt: #b8e2d4;
+    --acc: #f68d8c;
+    --sec: #000000;
+    */
 }
 
 /* Palette::locale::portuguese */
@@ -22,5 +40,11 @@
     --bg-meta: #000000;
     --txt: #f0f8ff;
     --acc: #7eacb5;
-    --sec: #112; /* #1b242a is also nice */
+    --sec: #112;
+
+    /* Nice alternative
+    --txt: #b8e2d4;
+    --acc: #f68d8c;
+    --sec: #000000;
+    */
 }
