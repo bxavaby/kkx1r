@@ -415,6 +415,7 @@ body {
     padding: 0;
     border: 0;
     background: transparent;
+    color: var(--txt);
     font: inherit;
     cursor: pointer;
 }
