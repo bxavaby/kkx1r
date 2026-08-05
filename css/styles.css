@@ -490,6 +490,38 @@ body {
     min-width: 9ch;
 }
 
+.update-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 16px;
+    block-size: 16px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.update-dot {
+    inline-size: 8px;
+    block-size: 8px;
+    background: var(--acc);
+    animation: puls8 1.8s ease-out infinite;
+}
+
+@keyframes puls8 {
+    0% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--acc) 69%, transparent);
+    }
+    69% {
+        box-shadow: 0 0 0 6px color-mix(in srgb, var(--acc) 0%, transparent);
+    }
+    100% {
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--acc) 0%, transparent);
+    }
+}
+
 .panel {
     flex: 1;
     display: flex;
@@ -747,12 +779,6 @@ body {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .tech-frame {
-        animation: none;
-    }
-}
-
 /* on click chip overlay */
 .stack-overlay {
     position: absolute;
@@ -834,6 +860,14 @@ body {
     .panel::after,
     .crt-surface::after {
         animation: none !important;
+    }
+
+    .tech-frame {
+        animation: none;
+    }
+
+    .update-dot {
+        animation: none;
     }
 }
 
