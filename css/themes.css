@@ -38,11 +38,18 @@
 .pt {
     --bg: oklch(0 0 0);
     --bg-meta: #000000;
+
+    --txt: #f0f8ff;
+    --acc: #f68d8c;
+    --sec: #0c020f;
+
+    /* Nice alternative
     --txt: #f0f8ff;
     --acc: #7eacb5;
     --sec: #112;
+    */
 
-    /* Nice alternative
+    /* Another
     --txt: #b8e2d4;
     --acc: #f68d8c;
     --sec: #000000;
