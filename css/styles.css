@@ -494,31 +494,41 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 16px;
-    block-size: 16px;
+    inline-size: 18px;
+    block-size: 18px;
     padding: 0;
     border: none;
     background: transparent;
     cursor: pointer;
     flex: 0 0 auto;
+    transition: transform var(--anim-fast);
 }
 
-.update-dot {
-    inline-size: 8px;
-    block-size: 8px;
-    background: var(--acc);
-    animation: puls8 1.8s ease-out infinite;
+.update-btn:active {
+    transform: scale(0.9);
 }
 
-@keyframes puls8 {
-    0% {
-        box-shadow: 0 0 0 0 color-mix(in srgb, var(--acc) 69%, transparent);
-    }
-    69% {
-        box-shadow: 0 0 0 6px color-mix(in srgb, var(--acc) 0%, transparent);
-    }
+.update-icon {
+    inline-size: 14px;
+    block-size: 14px;
+    fill: color-mix(in srgb, var(--txt) 45%, transparent);
+    transition: fill var(--anim-fast);
+}
+
+.update-btn.is-update-available .update-icon {
+    fill: url(#metallic-icon);
+    animation: glow 1.8s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%,
     100% {
-        box-shadow: 0 0 0 0 color-mix(in srgb, var(--acc) 0%, transparent);
+        filter: drop-shadow(0 0 0 transparent);
+    }
+    50% {
+        filter: drop-shadow(
+            0 0 3px color-mix(in srgb, var(--acc) 70%, transparent)
+        );
     }
 }
 
@@ -866,7 +876,7 @@ body {
         animation: none;
     }
 
-    .update-dot {
+    .update-btn.is-update-available .update-icon {
         animation: none;
     }
 }
